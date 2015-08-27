@@ -47,6 +47,9 @@ on boot
     chown root input /sys/class/sig_sensor/g_sensor/en_sig_motion
     chown root input /sys/class/srot_sensor/g_sensor/en_disp_rotation
 
+    # Change ownership for vibrator
+    chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
+
 # Services start here
 
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
